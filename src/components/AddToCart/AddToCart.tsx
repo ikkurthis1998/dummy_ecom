@@ -41,11 +41,19 @@ const AddToCart: React.FC<AddToCartProps> = ({ product }) => {
 
 	if (quantity) {
 		return (
-			<Counter
-				initialValue={quantity}
-				product={product}
-				onChange={setQuantity}
-			/>
+			<div
+				style={{
+					display: "flex",
+					alignItems: "center",
+					justifyContent: "center",
+				}}
+			>
+				<Counter
+					initialValue={quantity}
+					product={product}
+					onChange={setQuantity}
+				/>
+			</div>
 		);
 	} else {
 		return (
