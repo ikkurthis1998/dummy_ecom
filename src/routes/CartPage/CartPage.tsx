@@ -25,7 +25,15 @@ const CartPage: React.FC = () => {
 		<div>
 			<h1>Cart</h1>
 			{items.length === 0 ? (
-				<p>Your cart is empty</p>
+				<>
+					<button
+						onClick={() => navigate("/")}
+						className="action-buttons-button"
+					>
+						Go to Home
+					</button>
+					<p>Your cart is empty</p>
+				</>
 			) : (
 				<>
 					<button
